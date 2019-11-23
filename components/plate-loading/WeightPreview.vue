@@ -1,46 +1,19 @@
 <template>
   <div>
     <template v-for="plate in plates">
-      <div
-        v-if="plate === weights.RED"
-        class="kg25 weight plate plate-kg25"
-      ></div>
-      <div
-        v-else-if="plate === weights.BLUE"
-        class="kg20 weight plate plate-kg20"
-      ></div>
-      <div
-        v-else-if="plate === weights.YELLOW"
-        class="kg15 weight plate plate-kg15"
-      ></div>
-      <div
-        v-else-if="plate === weights.GREEN"
-        class="kg10 weight plate plate-kg10"
-      ></div>
-      <div
-        v-else-if="plate === weights.WHITE"
-        class="kg5 weight plate plate-kg5"
-      ></div>
-      <div
-        v-else-if="plate === weights.BLACK"
-        class="kg2d5 weight plate plate-kg2d5"
-      ></div>
-      <div
-        v-else-if="plate === weights.SILVER"
-        class="kg1d25 weight plate plate-kg1d25"
-      >
+      <div v-if="plate === weights.RED" class="kg25 weight plate plate-kg25"></div>
+      <div v-else-if="plate === weights.BLUE" class="kg20 weight plate plate-kg20"></div>
+      <div v-else-if="plate === weights.YELLOW" class="kg15 weight plate plate-kg15"></div>
+      <div v-else-if="plate === weights.GREEN" class="kg10 weight plate plate-kg10"></div>
+      <div v-else-if="plate === weights.WHITE" class="kg5 weight plate plate-kg5"></div>
+      <div v-else-if="plate === weights.BLACK" class="kg2d5 weight plate plate-kg2d5"></div>
+      <div v-else-if="plate === weights.SILVER" class="kg1d25 weight plate plate-kg1d25">
         1.25
       </div>
-      <div
-        v-else-if="plate === weights.MINI"
-        class="kg0d5 weight plate plate-kg0d5"
-      >
+      <div v-else-if="plate === weights.MINI" class="kg0d5 weight plate plate-kg0d5">
         0.5
       </div>
-      <div
-        v-else-if="plate === weights.MICRO"
-        class="kg0d25 weight plate plate-kg0d25"
-      >
+      <div v-else-if="plate === weights.MICRO" class="kg0d25 weight plate plate-kg0d25">
         0.25
       </div>
     </template>
