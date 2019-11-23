@@ -20,31 +20,37 @@
 
       <v-slide-x-reverse-transition>
         <v-btn text small color="#373737" @click="toolbar = false">
-          <v-icon color="white" size="24px" v-if="toolbar">{{ mdiFullscreen }}</v-icon>
+          <v-icon color="white" size="24px" v-if="toolbar">
+            {{ mdiFullscreen }}
+          </v-icon>
         </v-btn>
       </v-slide-x-reverse-transition>
-
     </v-app-bar>
+
+    <v-content>
+      <v-container>
+        <nuxt />
+      </v-container>
+    </v-content>
   </v-app>
 </template>
 
 <script>
-  import {
+import {
+  mdiFullscreen,
+  mdiViewDashboard,
+  mdiWeightKilogram,
+  mdiAccountPlus
+} from '@mdi/js'
+
+export default {
+  name: 'Toolbar',
+  data: () => ({
+    toolbar: true,
     mdiFullscreen,
     mdiViewDashboard,
     mdiWeightKilogram,
     mdiAccountPlus
-  } from '@mdi/js'
-
-  export default {
-    name: 'Toolbar',
-    data: () => ({
-      toolbar: true,
-      mdiFullscreen,
-      mdiViewDashboard,
-      mdiWeightKilogram,
-      mdiAccountPlus
-    }),
-    methods: {}
-  }
+  })
+}
 </script>

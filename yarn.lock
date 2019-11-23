@@ -739,7 +739,7 @@
   dependencies:
     "@jest/console" "^24.7.1"
     "@jest/reporters" "^24.9.0"
-    "@jest/test-result" "^24.9.0"
+    "@jest/tests-result" "^24.9.0"
     "@jest/transform" "^24.9.0"
     "@jest/types" "^24.9.0"
     ansi-escapes "^3.0.0"
@@ -791,7 +791,7 @@
   integrity sha512-mu4X0yjaHrffOsWmVLzitKmmmWSQ3GGuefgNscUSWNiUNcEOSEQk9k3pERKEQVBb0Cnn88+UESIsZEMH3o88Gw==
   dependencies:
     "@jest/environment" "^24.9.0"
-    "@jest/test-result" "^24.9.0"
+    "@jest/tests-result" "^24.9.0"
     "@jest/transform" "^24.9.0"
     "@jest/types" "^24.9.0"
     chalk "^2.0.1"
@@ -823,7 +823,7 @@
 
 "@jest/test-result@^24.9.0":
   version "24.9.0"
-  resolved "https://registry.yarnpkg.com/@jest/test-result/-/test-result-24.9.0.tgz#11796e8aa9dbf88ea025757b3152595ad06ba0ca"
+  resolved "https://registry.yarnpkg.com/@jest/tests-result/-/tests-result-24.9.0.tgz#11796e8aa9dbf88ea025757b3152595ad06ba0ca"
   integrity sha512-XEFrHbBonBJ8dGp2JmF8kP/nQI/ImPpygKHwQ/SY+es59Z3L5PI4Qb9TQQMAEeYsThG1xF0k6tmG0tIKATNiiA==
   dependencies:
     "@jest/console" "^24.9.0"
@@ -832,10 +832,10 @@
 
 "@jest/test-sequencer@^24.9.0":
   version "24.9.0"
-  resolved "https://registry.yarnpkg.com/@jest/test-sequencer/-/test-sequencer-24.9.0.tgz#f8f334f35b625a4f2f355f2fe7e6036dad2e6b31"
+  resolved "https://registry.yarnpkg.com/@jest/tests-sequencer/-/tests-sequencer-24.9.0.tgz#f8f334f35b625a4f2f355f2fe7e6036dad2e6b31"
   integrity sha512-6qqsU4o0kW1dvA95qfNog8v8gkRN9ph6Lz7r96IvZpHdNipP2cBcb07J1Z45mz/VIS01OHJ3pY8T5fUY38tg4A==
   dependencies:
-    "@jest/test-result" "^24.9.0"
+    "@jest/tests-result" "^24.9.0"
     jest-haste-map "^24.9.0"
     jest-runner "^24.9.0"
     jest-runtime "^24.9.0"
@@ -1329,7 +1329,7 @@
 
 "@vue/test-utils@^1.0.0-beta.27":
   version "1.0.0-beta.29"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-1.0.0-beta.29.tgz#c942cf25e891cf081b6a03332b4ae1ef430726f0"
+  resolved "https://registry.yarnpkg.com/@vue/tests-utils/-/tests-utils-1.0.0-beta.29.tgz#c942cf25e891cf081b6a03332b4ae1ef430726f0"
   integrity sha512-yX4sxEIHh4M9yAbLA/ikpEnGKMNBCnoX98xE1RwxfhQVcn0MaXNSj1Qmac+ZydTj6VBSEVukchBogXBTwc+9iA==
   dependencies:
     dom-event-types "^1.0.0"
@@ -1851,7 +1851,7 @@ babel-plugin-istanbul@^5.1.0:
     "@babel/helper-plugin-utils" "^7.0.0"
     find-up "^3.0.0"
     istanbul-lib-instrument "^3.3.0"
-    test-exclude "^5.2.3"
+    tests-exclude "^5.2.3"
 
 babel-plugin-jest-hoist@^24.9.0:
   version "24.9.0"
@@ -4794,7 +4794,7 @@ jest-cli@^24.9.0:
   integrity sha512-+VLRKyitT3BWoMeSUIHRxV/2g8y9gw91Jh5z2UmXZzkZKpbC08CSehVxgHUwTpy+HwGcns/tqafQDJW7imYvGg==
   dependencies:
     "@jest/core" "^24.9.0"
-    "@jest/test-result" "^24.9.0"
+    "@jest/tests-result" "^24.9.0"
     "@jest/types" "^24.9.0"
     chalk "^2.0.1"
     exit "^0.1.2"
@@ -4813,7 +4813,7 @@ jest-config@^24.9.0:
   integrity sha512-RATtQJtVYQrp7fvWg6f5y3pEFj9I+H8sWw4aKxnDZ96mob5i5SD6ZEGWgMLXQ4LE8UurrjbdlLWdUeo+28QpfQ==
   dependencies:
     "@babel/core" "^7.1.0"
-    "@jest/test-sequencer" "^24.9.0"
+    "@jest/tests-sequencer" "^24.9.0"
     "@jest/types" "^24.9.0"
     babel-jest "^24.9.0"
     chalk "^2.0.1"
@@ -4912,7 +4912,7 @@ jest-jasmine2@^24.9.0:
   dependencies:
     "@babel/traverse" "^7.1.0"
     "@jest/environment" "^24.9.0"
-    "@jest/test-result" "^24.9.0"
+    "@jest/tests-result" "^24.9.0"
     "@jest/types" "^24.9.0"
     chalk "^2.0.1"
     co "^4.6.0"
@@ -4951,7 +4951,7 @@ jest-message-util@^24.9.0:
   integrity sha512-oCj8FiZ3U0hTP4aSui87P4L4jC37BtQwUMqk+zk/b11FR19BJDeZsZAvIHutWnmtw7r85UmR3CEWZ0HWU2mAlw==
   dependencies:
     "@babel/code-frame" "^7.0.0"
-    "@jest/test-result" "^24.9.0"
+    "@jest/tests-result" "^24.9.0"
     "@jest/types" "^24.9.0"
     "@types/stack-utils" "^1.0.1"
     chalk "^2.0.1"
@@ -5003,7 +5003,7 @@ jest-runner@^24.9.0:
   dependencies:
     "@jest/console" "^24.7.1"
     "@jest/environment" "^24.9.0"
-    "@jest/test-result" "^24.9.0"
+    "@jest/tests-result" "^24.9.0"
     "@jest/types" "^24.9.0"
     chalk "^2.4.2"
     exit "^0.1.2"
@@ -5082,7 +5082,7 @@ jest-util@^24.9.0:
     "@jest/console" "^24.9.0"
     "@jest/fake-timers" "^24.9.0"
     "@jest/source-map" "^24.9.0"
-    "@jest/test-result" "^24.9.0"
+    "@jest/tests-result" "^24.9.0"
     "@jest/types" "^24.9.0"
     callsites "^3.0.0"
     chalk "^2.0.1"
@@ -5109,7 +5109,7 @@ jest-watcher@^24.9.0:
   resolved "https://registry.yarnpkg.com/jest-watcher/-/jest-watcher-24.9.0.tgz#4b56e5d1ceff005f5b88e528dc9afc8dd4ed2b3b"
   integrity sha512-+/fLOfKPXXYJDYlks62/4R4GoT+GU1tYZed99JSCOsmzkkF7727RqKrjNAxtfO4YpGv11wybgRvCjR73lK2GZw==
   dependencies:
-    "@jest/test-result" "^24.9.0"
+    "@jest/tests-result" "^24.9.0"
     "@jest/types" "^24.9.0"
     "@types/yargs" "^13.0.0"
     ansi-escapes "^3.0.0"
@@ -8333,7 +8333,7 @@ terser@^4.1.2, terser@^4.3.9:
 
 test-exclude@^5.2.3:
   version "5.2.3"
-  resolved "https://registry.yarnpkg.com/test-exclude/-/test-exclude-5.2.3.tgz#c3d3e1e311eb7ee405e092dac10aefd09091eac0"
+  resolved "https://registry.yarnpkg.com/tests-exclude/-/tests-exclude-5.2.3.tgz#c3d3e1e311eb7ee405e092dac10aefd09091eac0"
   integrity sha512-M+oxtseCFO3EDtAaGH7iiej3CBkzXqFMbzqYAACdzKui4eZA+pq3tZEwChvOdNfa7xxy8BfbmgJSIr43cC/+2g==
   dependencies:
     glob "^7.1.3"
