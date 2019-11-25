@@ -27,7 +27,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/firebase.js', '~/plugins/fireauth.js'],
+  plugins: ['~/plugins/firebase.js', '~/plugins/fireauth.js', '~/plugins/media-queries.js'],
   /*
    ** Nuxt.js dev-modules
    */

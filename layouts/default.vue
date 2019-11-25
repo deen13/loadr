@@ -8,12 +8,16 @@
 
       <v-btn text nuxt to="/">
         <v-icon>{{ mdiWeightKilogram }}</v-icon>
-        <span class="ml-2">Scheibenstecker</span>
+        <mq-layout mq="md+">
+          <span class="ml-2">Scheibenstecker</span>
+        </mq-layout>
       </v-btn>
 
       <v-btn text nuxt to="/management">
         <v-icon>{{ mdiAccountPlus }}</v-icon>
-        <span class="ml-2">Verwaltung</span>
+        <mq-layout mq="md+">
+          <span class="ml-2">Verwaltung</span>
+        </mq-layout>
       </v-btn>
 
       <v-spacer></v-spacer>
