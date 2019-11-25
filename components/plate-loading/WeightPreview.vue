@@ -19,7 +19,7 @@
         </div>
       </template>
     </div>
-    <h3 id="textual" class="pl-5 display-3">{{ weight.toLocaleString("de-DE") }} Kilogramm</h3>
+    <h3 id="textual" class="pl-5 display-3">{{ weight.toLocaleString('de-DE') }} Kilogramm</h3>
   </v-row>
 </template>
 

@@ -15,7 +15,7 @@ const calculatePlates = (weight, squat) => {
   }
 
   if (weight < 0) {
-    throw 'Weight needs to be greater then 0'
+    throw 'Weight needs to be greater than 0'
   }
 
   const start = {

@@ -1,4 +1,4 @@
-# load3r
+# loadr
 
 > Tool to support loaders during a calisthenics competitions
 

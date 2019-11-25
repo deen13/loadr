@@ -6,12 +6,12 @@
         <span class="font-weight-light ml-1">MACHBAR</span>
       </v-toolbar-title>
 
-      <v-btn text href="#/loader">
+      <v-btn text nuxt to="/">
         <v-icon>{{ mdiWeightKilogram }}</v-icon>
         <span class="ml-2">Scheibenstecker</span>
       </v-btn>
 
-      <v-btn text href="#/management">
+      <v-btn text nuxt to="/management">
         <v-icon>{{ mdiAccountPlus }}</v-icon>
         <span class="ml-2">Verwaltung</span>
       </v-btn>
@@ -36,12 +36,8 @@
 </template>
 
 <script>
-import {
-  mdiFullscreen,
-  mdiViewDashboard,
-  mdiWeightKilogram,
-  mdiAccountPlus
-} from '@mdi/js'
+import { mdiFullscreen, mdiViewDashboard, mdiWeightKilogram, mdiAccountPlus, mdiLogout } from '@mdi/js'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'Toolbar',
@@ -51,6 +47,9 @@ export default {
     mdiViewDashboard,
     mdiWeightKilogram,
     mdiAccountPlus
-  })
+  }),
+  computed: {
+    ...mapGetters(['isAuthenticated'])
+  }
 }
 </script>

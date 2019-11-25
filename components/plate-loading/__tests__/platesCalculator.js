@@ -12,23 +12,8 @@ describe('platesCalculator.js', () => {
     [15, MUSCLE_UP, [weights.YELLOW]],
     [75, SQUAT, [weights.RED, weights.BLACK]],
     [220, SQUAT, [weights.RED, weights.RED, weights.RED, weights.RED]],
-    [
-      260,
-      SQUAT,
-      [weights.RED, weights.RED, weights.RED, weights.RED, weights.BLUE]
-    ],
-    [
-      140,
-      DIP,
-      [
-        weights.RED,
-        weights.RED,
-        weights.RED,
-        weights.RED,
-        weights.RED,
-        weights.YELLOW
-      ]
-    ]
+    [260, SQUAT, [weights.RED, weights.RED, weights.RED, weights.RED, weights.BLUE]],
+    [140, DIP, [weights.RED, weights.RED, weights.RED, weights.RED, weights.RED, weights.YELLOW]]
   ]).test('%s should result in %s', (weight, squat, expectedPlates) => {
     const plates = calculatePlates(weight, squat)
 

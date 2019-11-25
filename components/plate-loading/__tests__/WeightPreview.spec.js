@@ -42,7 +42,7 @@ describe('WeightPreview', () => {
       }
     })
 
-    expect(wrapper.find('#textual').text()).toEqual("140 Kilogramm")
+    expect(wrapper.find('#textual').text()).toEqual('140 Kilogramm')
   })
 
   it('renders double numbers in the german format', () => {
@@ -53,6 +53,6 @@ describe('WeightPreview', () => {
       }
     })
 
-    expect(wrapper.find('#textual').text()).toEqual("24,5 Kilogramm")
+    expect(wrapper.find('#textual').text()).toEqual('24,5 Kilogramm')
   })
 })
