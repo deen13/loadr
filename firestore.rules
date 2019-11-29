@@ -1,0 +1,8 @@
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /attempts/{attempt} {
+      allow write: if request.auth.token.email.matches('.*@machbar-spenge.de$');
+      allow read: if true;
+    }
+  }
+}
