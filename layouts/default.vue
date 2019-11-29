@@ -22,13 +22,15 @@
 
       <v-spacer></v-spacer>
 
-      <v-slide-x-reverse-transition>
-        <v-btn text small color="#373737" @click="toolbar = false">
-          <v-icon color="white" size="24px" v-if="toolbar">
-            {{ mdiFullscreen }}
-          </v-icon>
-        </v-btn>
-      </v-slide-x-reverse-transition>
+      <mq-layout mq="md+">
+        <v-slide-x-reverse-transition>
+          <v-btn text small color="#373737" @click="toolbar = false">
+            <v-icon color="white" size="24px" v-if="toolbar">
+              {{ mdiFullscreen }}
+            </v-icon>
+          </v-btn>
+        </v-slide-x-reverse-transition>
+      </mq-layout>
     </v-app-bar>
 
     <v-content>
