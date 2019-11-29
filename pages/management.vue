@@ -31,8 +31,8 @@
       <v-col cols="9" class="fill-height">
         <mobile-number-input v-model="weight" label="Kilogramm" step="5"></mobile-number-input>
       </v-col>
-      <v-col cols="3" class="fill-height" @click="submitNextAttempt">
-        <v-btn color="#61956D" fab dark>
+      <v-col cols="3" class="fill-height">
+        <v-btn color="#61956D" fab dark @click="submitNextAttempt" :loading="loading">
           <v-icon>mdi-check</v-icon>
         </v-btn>
       </v-col>
@@ -48,15 +48,22 @@ export default {
   components: { MobileNumberInput },
   middleware: 'auth',
   data: () => ({
+    loading: false,
     discipline: 1,
     weight: 0
   }),
   methods: {
     submitNextAttempt() {
-      firestore.collection('/attempts').add({
-        weight: this.weight,
-        discipline: this.discipline
-      })
+      this.loading = true
+
+      firestore
+        .collection('/attempts')
+        .add({
+          weight: this.weight,
+          discipline: this.discipline,
+          timestamp: new Date()
+        })
+        .finally(() => (this.loading = false))
     }
   }
 }
