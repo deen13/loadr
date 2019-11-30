@@ -42,11 +42,10 @@
 </template>
 
 <script>
-import { mdiFullscreen, mdiViewDashboard, mdiWeightKilogram, mdiAccountPlus, mdiLogout } from '@mdi/js'
-import { mapGetters, mapActions } from 'vuex'
+import { mdiFullscreen, mdiViewDashboard, mdiWeightKilogram, mdiAccountPlus } from '@mdi/js'
+import { mapGetters } from 'vuex'
 
 export default {
-  name: 'Toolbar',
   data: () => ({
     toolbar: true,
     mdiFullscreen,
