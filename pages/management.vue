@@ -43,15 +43,13 @@
 <script>
 import MobileNumberInput from '@/components/MobileNumberInput.vue'
 import { firestore } from '../plugins/firebase'
-import disciplines from '../utils/disciplines'
+import { disciplines, disciplineIdByText } from '../utils/disciplines'
 
 export default {
   components: { MobileNumberInput },
   middleware: 'auth',
   data: () => ({
-    loading: false,
-    discipline: 1,
-    weight: 0
+    loading: false
   }),
   methods: {
     submitNextAttempt() {
@@ -65,6 +63,20 @@ export default {
           timestamp: new Date()
         })
         .finally(() => (this.loading = false))
+    }
+  },
+  async asyncData() {
+    const snapshot = await firestore
+      .collection('attempts')
+      .orderBy('timestamp', 'desc')
+      .limit(1)
+      .get()
+
+    const event = snapshot.docs.pop().data()
+
+    return {
+      weight: event.weight,
+      discipline: disciplineIdByText(event.discipline)
     }
   }
 }
