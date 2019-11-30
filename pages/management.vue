@@ -45,6 +45,9 @@ import MobileNumberInput from '@/components/MobileNumberInput.vue'
 import { firestore } from '../plugins/firebase'
 import { disciplines, disciplineIdByText } from '../utils/disciplines'
 
+//TODO: use mdi icons via import
+//TODO: handle virtual keyboard over logo
+
 export default {
   components: { MobileNumberInput },
   middleware: 'auth',

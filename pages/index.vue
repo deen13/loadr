@@ -12,6 +12,11 @@
 import WeightPreview from '../components/plate-loading/WeightPreview'
 import { firestore } from '../plugins/firebase'
 
+// TODO: optimize layout for ipad and tv
+// TODO: add web manifest
+// TODO: setup github actions
+// TODO: fix authorization on first load -> global nuxt hook
+
 export default {
   components: { WeightPreview },
   async asyncData() {

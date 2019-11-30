@@ -52,7 +52,7 @@ export default {
         this.loading = true
 
         this.signIn({ email: this.email, password: this.password })
-          .then(() => this.$router.back())
+          .then(() => this.$router.back()) // TODO: fix routing
           .catch(error => (this.loginFailed = true))
           .finally(() => (this.loading = false))
       }
