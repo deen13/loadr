@@ -5,7 +5,7 @@
     </v-row>
     <v-row class="form-container mx-2" align="center">
       <v-col cols="12">
-        <v-bottom-navigation :value="discipline" grow color="primary" style="border-radius: 10px">
+        <v-bottom-navigation v-model="discipline" grow color="primary" style="border-radius: 10px">
           <v-btn>
             <span>MU</span>
             <v-icon>mdi-numeric-1-circle</v-icon>
@@ -43,6 +43,7 @@
 <script>
 import MobileNumberInput from '@/components/MobileNumberInput.vue'
 import { firestore } from '../plugins/firebase'
+import disciplines from '../utils/disciplines'
 
 export default {
   components: { MobileNumberInput },
@@ -60,7 +61,7 @@ export default {
         .collection('/attempts')
         .add({
           weight: this.weight,
-          discipline: this.discipline,
+          discipline: disciplines[this.discipline],
           timestamp: new Date()
         })
         .finally(() => (this.loading = false))
