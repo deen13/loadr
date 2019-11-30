@@ -1,21 +1,13 @@
 <template>
-  <v-row justify="center">
-    <v-col cols="12" class="py-2">
-      <v-row justify="center">
-        <weight-preview :value="weight" :squat="discipline === 'SQUAT'"></weight-preview>
-      </v-row>
-    </v-col>
-  </v-row>
+  <weight-preview :value="weight" :squat="discipline === 'SQUAT'"></weight-preview>
 </template>
 
 <script>
 import WeightPreview from '../components/plate-loading/WeightPreview'
 import { firestore } from '../plugins/firebase'
 
-// TODO: optimize layout for ipad and tv
 // TODO: add web manifest
 // TODO: setup github actions
-// TODO: fix authorization on first load -> global nuxt hook
 
 export default {
   components: { WeightPreview },
