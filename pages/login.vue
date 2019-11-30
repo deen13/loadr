@@ -25,6 +25,7 @@
 <script>
 import { mdiLock, mdiAt } from '@mdi/js'
 import { mapActions } from 'vuex'
+import firebase from 'firebase'
 
 const EMAIL_REGEX = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
@@ -57,6 +58,13 @@ export default {
           .finally(() => (this.loading = false))
       }
     }
+  },
+  mounted() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.$router.push('/management')
+      }
+    }).bind(this)
   }
 }
 </script>
