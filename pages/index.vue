@@ -2,8 +2,7 @@
   <v-row justify="center">
     <v-col cols="12" class="py-2">
       <v-row justify="center">
-        <!-- TODO: Loading Animation -->
-        <weight-preview v-if="lastEvent" :weight="lastEvent.weight" :squat="lastEvent.discipline === 'SQUAT'"></weight-preview>
+        <weight-preview :value="weight" :squat="discipline === 'SQUAT'"></weight-preview>
       </v-row>
     </v-col>
   </v-row>
@@ -15,18 +14,27 @@ import { firestore } from '../plugins/firebase'
 
 export default {
   components: { WeightPreview },
-  data: () => ({
-    lastEvent: undefined
-  }),
+  async asyncData() {
+    const snapshot = await firestore
+      .collection('attempts')
+      .orderBy('timestamp', 'desc')
+      .limit(1)
+      .get()
+
+    return snapshot.docs.pop().data()
+  },
   mounted() {
     firestore
       .collection('attempts')
-      .orderBy('timestamp')
+      .orderBy('timestamp', 'desc')
+      .limit(1)
       .onSnapshot(snapshot => {
-        this.lastEvent = snapshot
-          .docChanges()
-          .pop()
-          .doc.data()
+        const event = snapshot.docs.pop().data()
+
+        this.$set(this, 'weight', event.weight)
+        this.$set(this, 'discipline', event.discipline)
+
+        //TODO: Updated Notification
       })
   }
 }

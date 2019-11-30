@@ -19,7 +19,7 @@
         </div>
       </template>
     </div>
-    <h3 id="textual" class="pl-5 display-3">{{ weight.toLocaleString('de-DE') }} Kilogramm</h3>
+    <h3 id="textual" class="pl-5 display-3">{{ value.toLocaleString('de-DE') }} Kilogramm</h3>
   </v-row>
 </template>
 
@@ -29,7 +29,7 @@ import weights from './weights'
 
 export default {
   props: {
-    weight: {
+    value: {
       type: Number,
       default: 0,
       validator: weight => weight > 0
@@ -42,7 +42,7 @@ export default {
   data: () => ({ weights }),
   computed: {
     plates() {
-      return calculatePlates(this.weight, this.squat)
+      return calculatePlates(this.value, this.squat)
     }
   }
 }
