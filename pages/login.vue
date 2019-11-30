@@ -53,7 +53,7 @@ export default {
         this.loading = true
 
         this.signIn({ email: this.email, password: this.password })
-          .then(() => this.$router.back()) // TODO: fix routing
+          .then(() => this.$router.push('/management'))
           .catch(error => (this.loginFailed = true))
           .finally(() => (this.loading = false))
       }
