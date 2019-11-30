@@ -1,5 +1,5 @@
 <template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
-  <v-text-field v-model="number" :rules="[positive, isNumber]" :label="label" outlined required>
+  <v-text-field v-model="number" :rules="[positive, isNumber]" :label="label" outlined required type="number">
     <template v-slot:prepend-inner>
       <v-icon class="mr-2" :disabled="number <= 0" @click="number = number - parse(step)">
         {{ mdiMinus }}
