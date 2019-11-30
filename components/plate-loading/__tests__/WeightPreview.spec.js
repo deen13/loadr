@@ -7,7 +7,7 @@ describe('WeightPreview', () => {
 
     const wrapper = mount(WeightPreview, {
       propsData: {
-        weight: 70,
+        value: 70,
         squat: true
       }
     })
@@ -26,7 +26,7 @@ describe('WeightPreview', () => {
 
     const wrapper = mount(WeightPreview, {
       propsData: {
-        weight: 140,
+        value: 140,
         squat: false
       }
     })
@@ -37,7 +37,7 @@ describe('WeightPreview', () => {
   it('renders the textual kg value correctly', () => {
     const wrapper = mount(WeightPreview, {
       propsData: {
-        weight: 140,
+        value: 140,
         squat: false
       }
     })
@@ -48,7 +48,7 @@ describe('WeightPreview', () => {
   it('renders double numbers in the german format', () => {
     const wrapper = mount(WeightPreview, {
       propsData: {
-        weight: 24.5,
+        value: 24.5,
         squat: false
       }
     })
