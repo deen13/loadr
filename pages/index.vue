@@ -8,8 +8,6 @@
 import WeightPreview from '../components/plate-loading/WeightPreview'
 import { firestore } from '../plugins/firebase'
 
-// TODO: setup github actions
-
 export default {
   components: { WeightPreview },
   async asyncData() {
@@ -31,8 +29,6 @@ export default {
 
         this.$set(this, 'weight', event.weight)
         this.$set(this, 'discipline', event.discipline)
-
-        //TODO: Updated Notification
       })
   }
 }
