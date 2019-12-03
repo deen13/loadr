@@ -6,24 +6,9 @@
     <v-row class="form-container mx-2" align="center">
       <v-col cols="12">
         <v-bottom-navigation v-model="discipline" grow color="primary" style="border-radius: 10px">
-          <v-btn>
-            <span>MU</span>
-            <v-icon>mdi-numeric-1-circle</v-icon>
-          </v-btn>
-
-          <v-btn>
-            <span>Dip</span>
-            <v-icon>mdi-numeric-2-circle</v-icon>
-          </v-btn>
-
-          <v-btn>
-            <span>Pull Up</span>
-            <v-icon>mdi-numeric-3-circle</v-icon>
-          </v-btn>
-
-          <v-btn>
-            <span>Squat</span>
-            <v-icon>mdi-numeric-4-circle</v-icon>
+          <v-btn v-for="discipline in disciplines" :key="discipline.text">
+            <span>{{ discipline.text }}</span>
+            <v-icon>{{ discipline.icon }}</v-icon>
           </v-btn>
         </v-bottom-navigation>
       </v-col>
@@ -33,7 +18,7 @@
       </v-col>
       <v-col cols="3" class="fill-height">
         <v-btn color="#61956D" fab dark @click="submitNextAttempt" :loading="loading">
-          <v-icon>mdi-check</v-icon>
+          <v-icon>{{ mdiCheck }}</v-icon>
         </v-btn>
       </v-col>
     </v-row>
@@ -43,16 +28,21 @@
 <script>
 import MobileNumberInput from '@/components/MobileNumberInput.vue'
 import { firestore } from '../plugins/firebase'
-import { disciplines, disciplineIdByText } from '../utils/disciplines'
-
-//TODO: use mdi icons via import
-//TODO: handle virtual keyboard over logo
+import { disciplineIdByText, disciplines } from '../utils/disciplines'
+import { mdiCheck, mdiNumeric1Circle, mdiNumeric2Circle, mdiNumeric3Circle, mdiNumeric4Circle } from '@mdi/js'
 
 export default {
   components: { MobileNumberInput },
   middleware: 'auth',
   data: () => ({
-    loading: false
+    mdiCheck,
+    loading: false,
+    disciplines: [
+      { text: 'MU', icon: mdiNumeric1Circle },
+      { text: 'Dip', icon: mdiNumeric2Circle },
+      { text: 'Pull Up', icon: mdiNumeric3Circle },
+      { text: 'Squat', icon: mdiNumeric4Circle }
+    ]
   }),
   methods: {
     submitNextAttempt() {
