@@ -8,7 +8,7 @@ Dieses Projekt ist das [MVP](https://en.wikipedia.org/wiki/Minimum_viable_produc
 
 
 ### Technologien
-Um die Inbetriebnahme möglichst unkompliziert zu gestalten wurde das MVP als Single-Page-App entwickelt, dadurch muss die Webseite nur auf den einzelnen Geräten aufgerufen werden und benötigt keine extra Infrastruktur. Für die Anwendung wurden [Nuxt](https://nuxtjs.org/) und [Vuetify](https://vuetifyjs.com/en/) im Frontend genutzt. Im Backend sorgt [Firebase](https://firebase.google.com/) für die Authentication, das Hosting und mit dem Firestore für die Echtzeit-Updates.
+Um die Inbetriebnahme möglichst unkompliziert zu gestalten wurde das MVP als Single-Page-App entwickelt. Dadurch muss die Webseite nur auf den einzelnen Geräten aufgerufen werden und benötigt keine extra Infrastruktur. Für die Anwendung wurden [Nuxt](https://nuxtjs.org/) und [Vuetify](https://vuetifyjs.com/en/) im Frontend genutzt. Im Backend sorgt [Firebase](https://firebase.google.com/) für die Authentication, das Hosting und mit dem Firestore für die Echtzeit-Updates.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/13850172/70087092-ea574900-1613-11ea-9d5c-9e8543f10b76.jpg"/>
 </p>
