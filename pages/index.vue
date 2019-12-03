@@ -1,12 +1,13 @@
 <template>
-  <weight-preview :value="weight" :squat="discipline === 'SQUAT'"></weight-preview>
+  <v-row justify="center" align="center" style="height: 100%">
+    <weight-preview :value="weight" :squat="discipline === 'SQUAT'"></weight-preview>
+  </v-row>
 </template>
 
 <script>
 import WeightPreview from '../components/plate-loading/WeightPreview'
 import { firestore } from '../plugins/firebase'
 
-// TODO: add web manifest
 // TODO: setup github actions
 
 export default {

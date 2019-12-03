@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row class="mx-2 mt-3">
       <v-img :src="require('@/assets/mmc-logo.png')" />
     </v-row>
     <v-row class="form-container mx-2" align="center">

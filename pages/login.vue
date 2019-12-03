@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row>
+    <v-row class="mx-2 mt-3">
       <v-img :src="require('@/assets/mmc-logo.png')" />
     </v-row>
     <v-row>
@@ -60,11 +60,14 @@ export default {
     }
   },
   mounted() {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        this.$router.push('/management')
-      }
-    }).bind(this)
+    firebase
+      .auth()
+      .onAuthStateChanged(user => {
+        if (user) {
+          this.$router.push('/management')
+        }
+      })
+      .bind(this)
   }
 }
 </script>
