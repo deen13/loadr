@@ -1,6 +1,6 @@
 # Calisthenics Competition Management MVP 
 
-Dieses Projekt ist das [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) einer Plattform zum Verwalten von Calisthenics [1RM](https://en.wikipedia.org/wiki/One-repetition_maximum) Wettkämpfen. Implementiert wurde die Vorschau des nächsten Gewichtes für die Scheibenstecker. In diesem beispielhaften Anwendungsfall trägt das Kampfgericht den jeweils nächsten Versuch in der App ein, welcher anschließend auf dem iPad oder TV für die Scheibenstecker angezeigt wird.
+Dieses Projekt ist das [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) einer Plattform zum Verwalten von Calisthenics [1RM](https://en.wikipedia.org/wiki/One-repetition_maximum) Wettkämpfen inspiriert von Next Lifter und Open Lifter.  Implementiert wurde die Vorschau des nächsten Gewichtes für die Scheibenstecker. In diesem beispielhaften Anwendungsfall trägt das Kampfgericht den jeweils nächsten Versuch in der App ein, welcher anschließend auf dem iPad oder TV für die Scheibenstecker angezeigt wird.
 
 | Bildschirm für Scheibenstecker (iPad - TV) | Ansicht des Kampfgerichtes  |
 |--|--|
