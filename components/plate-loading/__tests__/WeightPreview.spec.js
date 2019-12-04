@@ -40,4 +40,15 @@ describe('WeightPreview', () => {
 
     expect(wrapper.find('#textual').text()).toEqual('140 Kilogramm')
   })
+
+  it('renders double numbers in the local format', () => {
+    const wrapper = mount(WeightPreview, {
+      propsData: {
+        value: 24.5,
+        squat: false
+      }
+    })
+
+    expect(wrapper.find('#textual').text()).toEqual(`${(24.5).toLocaleString()} Kilogramm`)
+  })
 })
