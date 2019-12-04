@@ -16,13 +16,9 @@ describe('WeightPreview', () => {
   })
 
   it('renders a 140kg dip correctly', () => {
-    const allPlates =
-      '<div class="kg25 weight plate plate-kg25"></div>' +
-      '<div class="kg25 weight plate plate-kg25"></div>' +
-      '<div class="kg25 weight plate plate-kg25"></div>' +
-      '<div class="kg25 weight plate plate-kg25"></div>' +
-      '<div class="kg25 weight plate plate-kg25"></div>' +
-      '<div class="kg15 weight plate plate-kg15"></div>'
+    const twentyFivePlate = '<div class="kg25 weight plate plate-kg25"></div>'
+    const fifteenPlate =  '<div class="kg15 weight plate plate-kg15"></div>'
+
 
     const wrapper = mount(WeightPreview, {
       propsData: {
@@ -31,7 +27,8 @@ describe('WeightPreview', () => {
       }
     })
 
-    expect(wrapper.find('#plates-wrapper').html()).toContain(allPlates)
+    expect(wrapper.find('#plates-wrapper').html()).toContain(fifteenPlate)
+    expect(wrapper.find('#plates-wrapper').html()).toContain(twentyFivePlate)
   })
 
   it('renders the textual kg value correctly', () => {
